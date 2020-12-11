@@ -3,8 +3,6 @@
 *.html
 .Rproj.user
 *.md
-!README.md
-
 *.R
 *.rds
 *.png
