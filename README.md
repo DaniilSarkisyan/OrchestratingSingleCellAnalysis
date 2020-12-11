@@ -8,10 +8,14 @@ Updating/installing from RStudio (as default docker's user rstudio) does not wor
 nlme: Installation path not writeable, unable to update packages: nlme
 gert: failed to find libgit2.pc
 
-"Bashing" as root into docker container (named osca) kid of works:
+"Bashing" as root into docker container (named osca) kind of works:
+
 sudo docker exec -it osca bash
+
 cd /home/rstudio/Documents/OrchestratingSingleCellAnalysis
+
 R -e 'BiocManager::install(remotes::local_package_deps(dependencies=TRUE), Ncpus=8)'
+
 R -e 'BiocManager::install(c(
 "brms",
 "cowplot",
@@ -30,9 +34,12 @@ R -e 'BiocManager::install(c(
 "unpivotr"
 ), update=TRUE, ask=FALSE, Ncpus=8)'
 
-Then in Rstudio (user rstudio) in terminal
+In Rstudio (user rstudio) in terminal:
+
 git config --global user.name "DaniilSarkisyan"
+
 git config --global user.email "MyMail"
+
 
 ## Overview
 
