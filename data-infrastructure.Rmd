@@ -82,7 +82,7 @@ To access the count data we just supplied, we can do any one of the following:
 * `counts(sce)` - this is a short-cut for the above, but *only* works for assays with the special name `"counts"`.
 
 ```{r}
-counts(sce)
+assay(sce, "counts")
 ```
 
 ### Adding more `assays`

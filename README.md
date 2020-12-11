@@ -4,9 +4,12 @@ Goal: To use docker image bioconductor/orchestratingsinglecellanalysis as a star
 To this end I need to install/update my usual packages.
 
 Updating/installing from RStudio (as default docker's user rstudio) does not work:
-`BiocManager::install(remotes::local_package_deps(dependencies=TRUE))`
+`BiocManager::install(remotes::local_package_deps(dependencies=TRUE))` produces
+
 nlme: Installation path not writeable, unable to update packages: nlme
+
 gert: failed to find libgit2.pc
+
 
 "Bashing" as root into docker container (named osca) kind of works:
 
