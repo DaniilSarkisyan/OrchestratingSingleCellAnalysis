@@ -1,6 +1,5 @@
 # Rmarkdown files for Orchestrating Single Cell Analyses
 
-Goal: To use docker imame bioconductor/orchestratingsinglecellanalysis as a starting point for my own scRNA-seq pipeline.
 Goal: To use docker image bioconductor/orchestratingsinglecellanalysis as a starting point for my own scRNA-seq pipeline.
 To this end I need to install/update my usual packages.
 
