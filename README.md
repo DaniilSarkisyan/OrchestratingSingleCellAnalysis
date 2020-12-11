@@ -1,5 +1,25 @@
 # Rmarkdown files for Orchestrating Single Cell Analyses
 
+2020-12-11: Updated with `BiocManager::install(remotes::local_package_deps(dependencies=TRUE))`
+
+2020-12-11: Prepared for reproducible research with `BiocManager::install(c(
+   "brms",
+   "cowplot",
+   "emmeans",
+   "flextable",
+   "ggridges",
+   "ggstance",
+   "modelr",
+   "officer",
+   "openxlsx",
+   "rstan",
+   "rvg",
+   "tidybayes",
+   "tidyverse",
+   "tidyxl",
+   "unpivotr"
+), update = TRUE) #, ask = FALSE)`
+
 ## Overview
 
 This repository contains the basic ingredients for the [Orchestrating Single Cell Analysis](https://osca.bioconductor.org) book.
