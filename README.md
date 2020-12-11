@@ -1,5 +1,36 @@
 # Rmarkdown files for Orchestrating Single Cell Analyses
 
+Goal: To use docker imame bioconductor/orchestratingsinglecellanalysis as a starting point for my own scRNA-seq pipeline.
+To this end I need to install/update my usual packages.
+
+Updating/installing from RStudio (as default docker's user rstudio) does not work:
+`BiocManager::install(remotes::local_package_deps(dependencies=TRUE))`
+nlme: Installation path not writeable, unable to update packages: nlme
+gert: failed to find libgit2.pc
+
+I have to "bash" as root into docker container (named osca):
+sudo docker exec -it osca bash
+cd /home/rstudio/Documents/OrchestratingSingleCellAnalysis
+R -e 'BiocManager::install(remotes::local_package_deps(dependencies=TRUE), Ncpus=8)'
+R -e 'BiocManager::install(c(
+"brms",
+"cowplot",
+"emmeans",
+"flextable",
+"ggridges",
+"ggstance",
+"modelr",
+"officer",
+"openxlsx",
+"rstan",
+"rvg",
+"tidybayes",
+"tidyverse",
+"tidyxl",
+"unpivotr"
+), update=TRUE, ask=FALSE, Ncpus=8)'
+
+
 ## Overview
 
 This repository contains the basic ingredients for the [Orchestrating Single Cell Analysis](https://osca.bioconductor.org) book.
